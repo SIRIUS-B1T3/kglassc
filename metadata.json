@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Id": "org.kwin6.camkart",
+        "Name": "Cam Saat ve Hava Kartı",
+        "Description": "Özelleştirilebilir Fluent cam kart saat ve hava durumu",
+        "Category": "Date and Time",
+        "Icon": "preferences-system-time",
+        "Authors": [
+            {
+                "Name": "Geliştirici"
+            }
+        ],
+        "Version": "1.0.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

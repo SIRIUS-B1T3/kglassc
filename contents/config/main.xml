@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <!-- 1. GENEL & KART AYARLARI -->
+  <group name="General">
+    <entry name="editMode" type="Bool"><default>false</default></entry>
+    <entry name="language" type="String"><default>tr</default></entry>
+    <entry name="cardRadius" type="Int"><default>32</default></entry>
+    <entry name="cardOpacity" type="Double"><default>0.52</default></entry>
+    <entry name="cardColor" type="Color"><default>#ffffff</default></entry>
+    <entry name="cardBorderColor" type="Color"><default>#ffffff</default></entry>
+    <entry name="cardBorderWidth" type="Double"><default>1.5</default></entry>
+    <entry name="cardShadow" type="Bool"><default>true</default></entry>
+
+    <!-- Ana Kart Gradyan Ayarları -->
+    <entry name="cardUseGradient" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="cardColor2" type="Color">
+      <default>#1e293b</default>
+    </entry>
+    <entry name="cardGradientAngle" type="Int">
+      <!-- 0: Dikey (Yukarıdan Aşağı), 1: Yatay (Soldan Sağa), 2: Çapraz (Sol-Üstten Sağ-Alta) -->
+      <default>2</default>
+    </entry>
+  </group>
+
+  <!-- 2. SAAT AYARLARI (SOL ÜST - TAVANDAN BAŞLAR) -->
+  <group name="Clock">
+    <entry name="clockStyle" type="Int"><default>0</default></entry>
+    <entry name="analogStyle" type="Int"><default>0</default></entry>
+    <entry name="clockFontFamily" type="String"><default>Segoe UI</default></entry>
+    <entry name="clockFontScale" type="Double"><default>1.0</default></entry>
+    <entry name="clockIsland" type="Bool"><default>false</default></entry>
+    <entry name="clockShadow" type="Bool"><default>false</default></entry>
+    <entry name="clockCapsuleColor" type="Color"><default>#67e8f9</default></entry>
+    <entry name="clockCapsuleOpacity" type="Double"><default>0.50</default></entry>
+    <entry name="clockCapsuleRadius" type="Int"><default>24</default></entry>
+    <entry name="clockCustomTextColor" type="Color"><default>#1e293b</default></entry>
+    <entry name="clockCol" type="Int"><default>0</default></entry>
+    <entry name="clockRow" type="Int"><default>0</default></entry>
+    <entry name="clockSpanX" type="Int"><default>6</default></entry>
+    <entry name="clockSpanY" type="Int"><default>6</default></entry>
+  </group>
+
+  <!-- 3. TARİH AYARLARI (SOL ALT) -->
+  <group name="Date">
+    <entry name="dateFormat" type="Int"><default>3</default></entry>
+    <entry name="dateFontFamily" type="String"><default>Segoe UI</default></entry>
+    <entry name="dateFontScale" type="Double"><default>1.0</default></entry>
+    <entry name="dateIsland" type="Bool"><default>false</default></entry>
+    <entry name="dateShadow" type="Bool"><default>false</default></entry>
+    <entry name="dateCapsuleColor" type="Color"><default>#ffffff</default></entry>
+    <entry name="dateCapsuleOpacity" type="Double"><default>0.20</default></entry>
+    <entry name="dateCapsuleRadius" type="Int"><default>16</default></entry>
+    <entry name="dateCustomTextColor" type="Color"><default>#1e293b</default></entry>
+    <entry name="dateCol" type="Int"><default>0</default></entry>
+    <entry name="dateRow" type="Int"><default>6</default></entry>
+    <entry name="dateSpanX" type="Int"><default>6</default></entry>
+    <entry name="dateSpanY" type="Int"><default>2</default></entry>
+  </group>
+
+  <!-- 4. HAVA DURUMU AYARLARI (SAĞ SÜTUN - TAVANDAN TABANA) -->
+  <group name="Weather">
+    <entry name="weatherLayoutType" type="Int"><default>1</default></entry>
+    <entry name="weatherDynamicColor" type="Bool"><default>true</default></entry>
+    <entry name="weatherFontFamily" type="String"><default>Segoe UI</default></entry>
+    <entry name="weatherFontScale" type="Double"><default>1.0</default></entry>
+    <entry name="weatherIsland" type="Bool"><default>false</default></entry>
+    <entry name="weatherShadow" type="Bool"><default>true</default></entry>
+    <entry name="weatherCapsuleColor" type="Color"><default>#fde047</default></entry>
+    <entry name="weatherCapsuleOpacity" type="Double"><default>0.75</default></entry>
+    <entry name="weatherCapsuleRadius" type="Int"><default>24</default></entry>
+    <entry name="weatherCustomTextColor" type="Color"><default>#1e293b</default></entry>
+    <entry name="weatherCol" type="Int"><default>6</default></entry>
+    <entry name="weatherRow" type="Int"><default>0</default></entry>
+    <entry name="weatherSpanX" type="Int"><default>6</default></entry>
+    <entry name="weatherSpanY" type="Int"><default>8</default></entry>
+    <entry name="selectedLocationLabel" type="String"><default>Ordu, Türkiye</default></entry>
+    <entry name="selectedLat" type="Double"><default>40.9839</default></entry>
+    <entry name="selectedLon" type="Double"><default>37.8764</default></entry>
+    <entry name="updateInterval" type="Int"><default>15</default></entry>
+  </group>
+</kcfg>

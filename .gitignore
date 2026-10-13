@@ -1,0 +1,6 @@
+*.qmlc
+*.jsc
+.directory
+*~
+.vscode/
+.idea/

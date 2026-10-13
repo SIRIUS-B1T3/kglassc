@@ -134,7 +134,7 @@ For the most reliable results, use a supported KDE Plasma 6 installation with it
 
 The repository is expected to follow a structure similar to the following:
 
-```text```
+```text
 kglassc/
 ├── metadata.json
 ├── package/
@@ -186,7 +186,7 @@ The exact dependency list depends on the QML imports and APIs used by the curren
 
 Install the development tools commonly used for Plasma applet development:
 
-```bash```
+```bash
 sudo pacman -S --needed git plasma-sdk
 ```
 
@@ -204,7 +204,7 @@ This method is suitable for development and testing directly from a Git checkout
 
 #### 1. Clone the repository
 
-```bash```
+```bash
 git clone https://github.com/SIRIUS-B1T3/kglassc.git
 cd kglassc
 ```
@@ -213,7 +213,7 @@ cd kglassc
 
 Inspect `metadata.json` and identify the plasmoid's actual plugin ID.
 
-```bash```
+```bash
 cat metadata.json
 ```
 
@@ -221,7 +221,7 @@ The installation directory should match the plugin ID declared by the package me
 
 For example, if the actual plugin ID is `org.example.clock`, the corresponding directory would be:
 
-```text```
+```text
 ~/.local/share/plasma/plasmoids/org.example.clock/
 ```
 
@@ -231,7 +231,7 @@ Replace the example ID with the value from the project's actual metadata.
 
 After identifying the correct plugin ID, copy the package into the local Plasma plasmoids directory.
 
-```bash```
+```bash
 mkdir -p ~/.local/share/plasma/plasmoids
 cp -a . ~/.local/share/plasma/plasmoids/ACTUAL_PLUGIN_ID
 ```
@@ -250,7 +250,7 @@ If the widget does not appear, consult the troubleshooting section before restar
 
 If a compatible `.plasmoid` archive is available from a project release, install it with the Plasma package tool.
 
-```bash```
+```bash
 kpackagetool6 --type Plasma/Applet --install /path/to/kglassc.plasmoid
 ```
 
@@ -258,7 +258,7 @@ Replace `/path/to/kglassc.plasmoid` with the actual archive path.
 
 To upgrade an existing installation:
 
-```bash```
+```bash
 kpackagetool6 --type Plasma/Applet --upgrade /path/to/kglassc.plasmoid
 ```
 
@@ -270,7 +270,7 @@ Check the project's [Releases](https://github.com/SIRIUS-B1T3/kglassc/releases) 
 
 List the installed applets:
 
-```bash```
+```bash
 kpackagetool6 --type Plasma/Applet --list
 ```
 
@@ -284,7 +284,7 @@ If the widget is missing from the output, verify its metadata, installation path
 
 If `plasma-sdk` is installed, use `plasmoidviewer` to test the applet independently of the normal desktop widget placement.
 
-```bash```
+```bash
 plasmoidviewer --help
 ```
 
@@ -294,7 +294,7 @@ If the tool supports the applet path argument, launch the local package using th
 
 For example, a commonly used invocation is:
 
-```bash```
+```bash
 plasmoidviewer -a ~/.local/share/plasma/plasmoids/ACTUAL_PLUGIN_ID
 ```
 
@@ -314,7 +314,7 @@ When the widget fails to load, inspect terminal output for:
 
 You can enable additional Qt logging for a diagnostic run:
 
-```bash```
+```bash
 QT_LOGGING_RULES="*.debug=true" plasmoidviewer -a ~/.local/share/plasma/plasmoids/ACTUAL_PLUGIN_ID
 ```
 
@@ -340,7 +340,7 @@ A practical development cycle is:
 
 Check the installation path and plugin ID.
 
-```bash```
+```bash
 find ~/.local/share/plasma/plasmoids -maxdepth 3 -name metadata.json -print
 ```
 
@@ -358,7 +358,7 @@ Install the Plasma SDK package provided by your distribution.
 
 On Arch Linux and CachyOS:
 
-```bash```
+```bash
 sudo pacman -S --needed plasma-sdk
 ```
 
@@ -406,7 +406,7 @@ For a manually installed copy, reinstalling into the correct plugin-ID directory
 
 Replace `ACTUAL_PLUGIN_ID` with the plugin ID used during installation.
 
-```bash```
+```bash
 rm -rf -- ~/.local/share/plasma/plasmoids/ACTUAL_PLUGIN_ID
 ```
 
@@ -414,7 +414,7 @@ This removes the specified plasmoid directory. Verify the path before executing 
 
 ### Remove a Package Installed with `kpackagetool6`
 
-```bash```
+```bash
 kpackagetool6 --type Plasma/Applet --remove ACTUAL_PLUGIN_ID
 ```
 
@@ -483,7 +483,7 @@ Remove sensitive information from logs before publishing them.
 
 Example commands:
 
-```bash```
+```bash
 git checkout -b feature/descriptive-name
 git add .
 git commit -m "feat: describe the change"
